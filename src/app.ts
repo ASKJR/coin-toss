@@ -1,1 +1,3 @@
-console.log('Coin Toss');
+import Coin from './models/coin.js';
+
+new Coin('/images/head.jpg', '/images/tail.jpg');
