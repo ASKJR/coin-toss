@@ -1,3 +1,3 @@
-import Coin from './models/coin.js';
+import Coin from './models/Coin/coin.js';
 
 new Coin('/images/head.jpg', '/images/tail.jpg');
