@@ -1,3 +1,4 @@
-import Coin from './models/Coin/coin.js';
+import Game from './game.js';
 
-new Coin('/images/head.jpg', '/images/tail.jpg');
+const coinToss = new Game();
+coinToss.start();

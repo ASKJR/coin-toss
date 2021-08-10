@@ -1,4 +1,4 @@
-import { Sides } from './sides';
+import { Sides } from './sides.js';
 
 export default class Coin {
   private headImgUrl: string;

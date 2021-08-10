@@ -7,10 +7,27 @@
   <title>Coin Toss</title>
   <script type="module" src="dist/app.js"></script>
   <link rel="stylesheet" href="/styles/app.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
 </head>
 <body>
-  <div id="app">
+  <div id="app" class="container">
     <img src="" id="coinImg">
+    <div class="row row-cols-3 text-center pt-5">
+      <div class="col">0</div>
+      <div class="col">
+        <select class="form-select" aria-label="Default select example" name="selectCoinSide" id="selectCoinSide">
+          <option value="heads">HEADS</option>
+          <option value="tails">TAILS</option>
+        </select>
+      </div>
+      <div class="col">0</div>
+    </div>
+    <div class="col-md-12  text-center pt-5">
+      <div class="col-md-12">
+        <button type="button" class="btn btn-primary btn-lg btn-block">Click to Toss</button>
+      </div>
+    </div>
   </div>
 </body>
 </html>
