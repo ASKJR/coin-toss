@@ -28,19 +28,26 @@ export default class Coin {
     this.sideUp = side;
   }
 
-  public toss(): void {
-    let counter = 0;
-    let side = Sides.head;
-    const interval = setInterval(() => {
-      this.setCoinImg(side);
-      side = side === Sides.head ? Sides.tail : Sides.head;
-      counter += 1;
-      if (counter >= 10) {
-        clearInterval(interval);
-        const index = Math.floor(Math.random() * 2);
-        this.setCoinImg(index);
-        this.setSideUp(index);
-      }
-    }, 400);
+  public get SideUp(): Sides {
+    return this.sideUp;
+  }
+
+  public toss(): Promise<void> {
+    return new Promise((resolve) => {
+      let counter = 0;
+      let side = Sides.head;
+      const interval = setInterval(() => {
+        this.setCoinImg(side);
+        side = side === Sides.head ? Sides.tail : Sides.head;
+        counter += 1;
+        if (counter >= 10) {
+          clearInterval(interval);
+          const index = Math.floor(Math.random() * 2);
+          this.setCoinImg(index);
+          this.setSideUp(index);
+          resolve();
+        }
+      }, 400);
+    });
   }
 }
